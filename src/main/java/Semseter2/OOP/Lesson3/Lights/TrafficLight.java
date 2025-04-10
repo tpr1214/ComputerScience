@@ -3,7 +3,6 @@ package Semseter2.OOP.Lesson3.Lights;
 import java.util.Random;
 
 public class TrafficLight {
-    Random random = new Random();
     private int color;
     private int green;//1
     private int red;//2
@@ -31,20 +30,23 @@ public class TrafficLight {
         if (this.color == 3) {
             color = "yellow";
         }
+        color+="  "+"matr"+this.distanceFromStart;
         return color;
     }
 
-    public void time() {
+
+
+    public void run() {
         while (true) {
             try {
             if (this.color == 1) {
                 Thread.sleep(this.green);
                 this.color=2;
-            }
+            }else
             if (this.color == 2) {
                 Thread.sleep(this.red);
                 this.color=3;
-            }
+            }else
             if (this.color == 3) {
                 Thread.sleep(this.yellow);
                 this.color=1;
