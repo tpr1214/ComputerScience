@@ -3,6 +3,10 @@ package Semseter2.OOP.Lesson3.Lights;
 import java.util.Random;
 
 public class TrafficLight {
+    public static final int COLOR_RED=1;
+    public static final int COLOR_YELLOW=2;
+    public static final int COLOR_GREEN=3;
+
     private int color;
     private int green;//1
     private int red;//2
@@ -21,13 +25,13 @@ public class TrafficLight {
 
     public String toString() {
         String color = "";
-        if (this.color == 1) {
+        if (this.color == COLOR_GREEN) {
             color = "green";
         }
-        if (this.color == 2) {
+        if (this.color == COLOR_RED) {
             color = "red";
         }
-        if (this.color == 3) {
+        if (this.color == COLOR_YELLOW) {
             color = "yellow";
         }
         color+="  "+"matr"+this.distanceFromStart;
